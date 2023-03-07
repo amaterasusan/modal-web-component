@@ -6,8 +6,6 @@ You can fully configure styles as you want, make the draggable, resizable modal 
 * Highly customizable
 * Easy and simple to use
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-Brightgreen.svg)](https://www.paypal.com/donate/?hosted_button_id=BS8UDTUXJWYBN)
-
 ## How to use it
 ### 1. Use a file './build/modal-win-component.min.js'
 ```javascript
