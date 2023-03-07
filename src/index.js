@@ -1,2 +1,1 @@
-import './modal-win-component'
-
+import './modal-win-component';
