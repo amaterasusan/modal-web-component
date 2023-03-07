@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modal window</title>
+  <style>
+    body {
+      font-family: sans-serif, Arial, Helvetica;
+      font-size: 1rem;
+    }
+
+    modal-win:not(:defined) {
+      display: none;
+    }
+
+    #modal-win1 {
+      --main-mw-width: 500px;
+      --main-mw-height: 300px;
+      --main-mw-overlay-bg: rgba(0, 0, 0, 0.3);
+      --main-mw-border-size: 1px;
+      --main-mw-border-radius: 6px;
+      --main-mw-bg-color: none;
+      --main-mw-border-color: rgba(231, 231, 231, 0.3);
+      --main-mw-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      /* modal header */
+      --main-mw-header-height: 48px;
+      --main-mw-header-bg-color: rgba(49, 139, 143, 0.9);
+      --main-mw-header-color: #c4f3ef;
+      --main-mw-header-border-bottom-color: #c4f3ef;
+      --main-mw-header-title-color: #c4f3ef;
+      /* modal icons */
+      --main-mw-icons-font-size: 1.1em;
+      --main-mw-icons-font-weight: 400;
+      --main-mw-icon-min-max-color: #ccc;
+      --main-mw-icon-close-color: rgb(85, 85, 83);
+      /* modal footer */
+      --main-mw-footer-height: 48px;
+      --main-mw-footer-padding-left-right: 16px;
+      --main-mw-footer-color: #e7e7e7;
+      --main-mw-footer-bg-color: rgba(49, 139, 143, 0.9);
+      --main-mw-footer-border-top-color: #c4f3ef;
+      /* modal body */
+      --main-mw-body-font-size: 0.9em;
+      --main-mw-body-letter-spacing: 2px;
+      --main-mw-body-padding-left-right: 16px;
+      --main-mw-body-padding-top-bottom: 10px;
+      --main-mw-body-bg-color: #f7f7f7;
+      --main-mw-body-color: #777;
+      /* scrolling */
+      --main-mw-scrollbar-track-color: #eee;
+      --main-mw-scrollbar-color: rgb(180, 194, 181);
+      --main-mw-scrollbar-size: 0.35rem;
+      --main-mw-scrollbar-minlength: 1.5rem;
+    }
+
+    a.wlink {
+      color: #e7e7e7;
+    }
+
+    a.blink {
+      font-size: 1.4rem;
+      display: block;
+      margin: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" onclick="document.getElementById('modal-win1').show()" class="blink">Open window</a>
+
+  <modal-win caption="Article title" id="modal-win1" resizable="true" moveable="true" maximize="true" footer="true">
+    <div slot="modal-main-content">
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet eget rhoncus.
+    </div>
+    <div slot="modal-footer-content">
+      <a href="https://dummyimage.com/108x100.png/dddddd/000000" class="wlink">Example link</a>
+    </div>
+  </modal-win>
+  <script defer="defer" src="./build/modal-win-component.min.js?123"></script>
+</body>
+
+</html>
